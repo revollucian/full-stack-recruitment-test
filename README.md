@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# TheCLUB full-stack recruitment test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Thanks for taking the time to do our front-end / full-stack coding test. The challenge has two parts:
 
-## Available Scripts
+1) a [task](#task) to create a basic flight results front-end site to show flight prices
 
-In the project directory, you can run:
+2) some [follow-up questions](./FOLLOW-UP.md)
 
-### `npm start`
+----
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+You will be graded based on the following have been met:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* Your implementation works as described in the [task](#task).
 
-### `npm test`
+* Your solution looks like the provided [design](#design).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+----
 
-### `npm run build`
+## Prerequisites/Environment Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installing Node
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The full stack test is developed using Node, using the following versions:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  **Node:** `LTS/Erbium (^12.13.0)`
 
-### `npm run eject`
+  **npm:** `^6.12.0`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+We recommend using [nvm](https://github.com/nvm-sh/nvm) or [nave](https://github.com/isaacs/nave) to manage your Node environment on **Unix/macOS** systems. If you use **Windows** then we recommend using [nvm-windows](https://github.com/coreybutler/nvm-windows).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To install the correct npm and node version for the project, use `nvm install` or `nave install`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The full stack test has built-in support for these. Just run `nvm use` or `nave auto` to select the correct Node version.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Task
 
-## Learn More
+We have placed a number of helpful todos inside the code (see `index.js` and `App.jsx`) to help get you started, the main items we are looking for are:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Fetch flight results from the provided `flights.json` and format them into client readable results.
+  - You are not required to serve this separately from the dev server (i.e. `npm start`).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Use the returned data to display a page of results that matches the given design.
+  - Times should be displayed in 24 hour format.
 
-### Code Splitting
+## Design
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+We've provided a [design](./designs/results-small.png) for small-screens (480px). Don't worry about tackling larger breakpoints, but **please make sure your solution looks good at 480px in portrait orientation**.
 
-### Analyzing the Bundle Size
+For the airline logos, insert the airline id to the following url: `https://logos.skyscnr.com/images/airlines/favicon/{id}.png`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Client implementation
 
-### Making a Progressive Web App
+We'd like you to use [React](https://facebook.github.io/react/). On top of that, use whatever front-end libraries you feel comfortable with.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Flight results
 
-### Advanced Configuration
+The provided `flights` `json` will return two collections of different items:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+* **Itineraries** - These are the containers for your trips, tying together **Legs**, and **prices**. Prices are offered by an **agent** - an airline or travel agent.
 
-### Deployment
+* **Legs** - These are journeys (outbound, return) with **duration**, **stops** and **airlines**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+A good structure to represent trip options would be hierarchical:
 
-### `npm run build` fails to minify
+```
+Itineraries
+  Legs
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Running the project
+
+To startup the frontend client run the following command.
+
+* `npm start` - This will start the application for development
+* `npm run build` - Will create a production optimised build
+* `npm test` - Will run the front end tests
+
+## Submission Guidelines
+
+* The zip file should be named {yourname}.zip, and should itself contain the full-stack-recruitment-test project folder with your submission.
+
+* The zip file should contain the [FOLLOW-UP.md](./FOLLOW-UP.md) file with answers to the follow-up questions.
+
+* The zip file should **not** include the `node_modules` folder.
+
+
+----
+
+Inspiration for the test format taken with ❤️ from [JustEat's recruitment test](https://github.com/justeat/JustEat.RecruitmentTest).
