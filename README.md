@@ -1,3 +1,14 @@
+
+## The original requested design
+
+![alt text](https://i.imgur.com/zOLP44L.png)
+
+## My version (with some slight adjustments)
+
+![alt text](https://i.imgur.com/ptH952p.png)
+
+
+
 # TheCLUB full-stack recruitment test
 
 Thanks for taking the time to do our front-end / full-stack coding test. The challenge has two parts:
