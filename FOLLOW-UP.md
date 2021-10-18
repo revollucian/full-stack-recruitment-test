@@ -16,7 +16,7 @@ Alternatively `craco start`
 
 ### Q) If you had more time, what further improvements or new features would you add?
 
-Knowing the context and the intended use of the component I would realistically add some inputs that could filter through the names of the airports/dates. An appropriate addition would also be a series of dropdowns and date selectors that the used can use to customise their search experience. Further improvements would consitute changes to my code in areas where functions could become more compact and as a result more readable.
+Knowing the context and the intended use of the component I would realistically add some inputs that could filter through the names of the airports/dates. An appropriate addition would also be a series of dropdowns and date selectors that a user can use in order to customise their search experience. Further improvements would consitute changes to my code in areas where functions could become more compact and as a result more readable.
 
 ### Q) Which parts are you most proud of? And why?
 
