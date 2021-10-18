@@ -6,7 +6,7 @@ For the front-end I've used the Tailwind library - a CSS framework that contains
 
 ### Q) What's the command to start the application locally?
 
-(Default) `npm start`
+(Default) `npm start` / `npm run start` - production optimised command
 
 Alternatively `craco start`
 
