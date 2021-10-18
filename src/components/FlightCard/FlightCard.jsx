@@ -5,12 +5,20 @@ import React from 'react';
 function FlightCard(props){
 
     var color;
+    var colorTwo;
 
     if (props.legOneStops == "Direct"){
         color = "#1ab0a3";
     }
     else{
         color = "#d55066";
+    }
+
+    if (props.legTwoStops == "Direct"){
+        colorTwo = "#1ab0a3";
+    }
+    else{
+        colorTwo = "#d55066";
     }
 
     return(
@@ -78,7 +86,7 @@ function FlightCard(props){
 
                     <div className="text-right">
                             <span className="text-gray-500 text-sm">{props.legTwoDuration}</span>
-                            <span className="block text-sm" style={{color: color}}>{props.legTwoStops}</span>
+                            <span className="block text-sm" style={{color: colorTwo}}>{props.legTwoStops}</span>
                     </div>
            </div>
 
