@@ -8,6 +8,15 @@
 ![alt text](https://i.imgur.com/ptH952p.png)
 
 
+If any errors are given regarding dependencies type in these commands in your terminal:
+
+1) `npm install @craco/craco`
+2) `npm install -D tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9`
+
+Then
+
+3) `npm run start`
+
 
 # TheCLUB full-stack recruitment test
 
